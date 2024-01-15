@@ -1,5 +1,32 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "forkProcessing": "enabled"
+  "postUpgradeTasks": {
+    "commands": ["pre-commit"],
+    "executionMode": "branch"
+  },
+  "forkProcessing": "enabled",
+  "packageRules": [
+    {
+      "groupName": "asdf",
+      "matchManagers": ["asdf"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major", "digest"],
+      "matchDepTypes": ["devDependencies", "action"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest",
+        "pin",
+        "pinDigest",
+        "lockFileMaintenance"
+      ],
+      "automerge": true
+    }
+  ]
 }
