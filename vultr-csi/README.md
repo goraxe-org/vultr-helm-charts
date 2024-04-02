@@ -20,5 +20,5 @@ A Helm chart for Vultr's Container Storage Interface.
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| vultrCSIRelease | string | `"v0.3.0"` |  |
+| vultrCSIRelease | string | `"v0.12.3"` |  |
 
