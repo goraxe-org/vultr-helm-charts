@@ -14,6 +14,10 @@ spec:
         role: csi-vultr
     spec:
       serviceAccountName: csi-vultr-node-sa
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       hostNetwork: true
       containers:
         - name: driver-registrar
