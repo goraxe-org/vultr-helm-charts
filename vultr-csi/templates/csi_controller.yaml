@@ -20,13 +20,13 @@ spec:
       affinity:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.controller.resources}}
-      resources:
-        {{- toYaml . | nindent 8 }}
-      {{- end}}
       containers:
         - name: csi-provisioner
           image: quay.io/k8scsi/csi-provisioner:v2.0.4
+          {{- with .Values.controller.resources}}
+          resources:
+            {{- toYaml . | nindent 8 }}
+          {{- end}}
           args:
             - "--volume-name-prefix=pvc"
             - "--volume-name-uuid-length=16"
@@ -51,6 +51,10 @@ spec:
           volumeMounts:
             - name: socket-dir
               mountPath: /var/lib/csi/sockets/pluginproxy/
+          {{- with .Values.controller.resources}}
+          resources:
+            {{- toYaml . | nindent 8 }}
+          {{- end}}
         - name: csi-vultr-plugin
           image: vultr/vultr-csi:{{ .Values.vultrCSIRelease }}
           args:
@@ -62,6 +66,10 @@ spec:
             {{- if .Values.env }}
             {{- toYaml .Values.env | nindent 12}}
             {{- end }}
+          {{- with .Values.controller.resources}}
+          resources:
+            {{- toYaml . | nindent 8 }}
+          {{- end}}
           imagePullPolicy: "Always"
           volumeMounts:
             - name: socket-dir
