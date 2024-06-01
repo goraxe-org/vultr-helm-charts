@@ -21,7 +21,7 @@ A Helm chart for Vultr's Container Storage Interface.
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | controller.affinity | object | `{}` |  |
-| controller.resources | object | `{}` |  |
+| controller.resources.limits.cpu | string | `"100m"` |  |
 | env | string | `nil` |  |
 | vultrCSIRelease | string | `"v0.12.3"` |  |
 

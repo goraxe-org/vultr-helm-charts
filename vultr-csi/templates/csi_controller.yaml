@@ -25,7 +25,7 @@ spec:
           image: quay.io/k8scsi/csi-provisioner:v2.0.4
           {{- with .Values.controller.resources}}
           resources:
-            {{- toYaml . | nindent 8 }}
+            {{- toYaml . | nindent 12 }}
           {{- end}}
           args:
             - "--volume-name-prefix=pvc"
@@ -53,7 +53,7 @@ spec:
               mountPath: /var/lib/csi/sockets/pluginproxy/
           {{- with .Values.controller.resources}}
           resources:
-            {{- toYaml . | nindent 8 }}
+            {{- toYaml . | nindent 12 }}
           {{- end}}
         - name: csi-vultr-plugin
           image: vultr/vultr-csi:{{ .Values.vultrCSIRelease }}
@@ -68,7 +68,7 @@ spec:
             {{- end }}
           {{- with .Values.controller.resources}}
           resources:
-            {{- toYaml . | nindent 8 }}
+            {{- toYaml . | nindent 12 }}
           {{- end}}
           imagePullPolicy: "Always"
           volumeMounts:
