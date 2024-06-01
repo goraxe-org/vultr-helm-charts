@@ -20,6 +20,10 @@ spec:
       affinity:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      {{- with .Values.controller.resources}}
+      resources:
+        {{- toYaml . | nindent 8 }}
+      {{- end}}
       containers:
         - name: csi-provisioner
           image: quay.io/k8scsi/csi-provisioner:v2.0.4
