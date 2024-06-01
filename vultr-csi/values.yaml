@@ -8,3 +8,4 @@ env:
 
 controller:
   affinity: {}
+  resources: {}
