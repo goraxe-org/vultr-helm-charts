@@ -1,2 +1,2 @@
-helm 3.16.2
-golang 1.23.3
+helm 3.17.0
+golang 1.23.4
