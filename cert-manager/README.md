@@ -8,7 +8,7 @@ A Vultr cert-manager repo for creating an ACME DNS01 solver webhook
 
 ## Maintainers
 
-| Name | Email | URL |
+| Name | Email | Url |
 | ---- | ------ | --- |
 | David Dymko |  |  |
 

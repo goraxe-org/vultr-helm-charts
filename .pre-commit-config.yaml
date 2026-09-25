@@ -25,7 +25,7 @@ repos:
         # optional custom config:
         args: [ --json, --verbose, --dockerfile ]
   - repo: https://github.com/norwoodj/helm-docs.git
-    rev: master
+    rev: v1.14.2
     hooks:
       - id: helm-docs-built
   - repo: https://github.com/gruntwork-io/pre-commit
