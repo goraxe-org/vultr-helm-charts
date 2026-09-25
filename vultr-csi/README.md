@@ -8,7 +8,7 @@ A Helm chart for Vultr's Container Storage Interface.
 
 ## Maintainers
 
-| Name | Email | Url |
+| Name | Email | URL |
 | ---- | ------ | --- |
 | David Dymko |  |  |
 
