@@ -8,7 +8,7 @@ A Helm chart for Vultr's Cloud Controller Manager
 
 ## Maintainers
 
-| Name | Email | URL |
+| Name | Email | Url |
 | ---- | ------ | --- |
 | David Dymko |  |  |
 
