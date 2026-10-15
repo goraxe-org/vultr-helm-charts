@@ -9,3 +9,20 @@ image:
   repository: ghcr.io/goraxe-org/vultr-cloud-controller-manager
 
 env: []
+
+# Defaults to the tolerations the DaemonSet previously hardcoded, so this
+# change is a no-op unless overridden.
+tolerations:
+  - key: "node-role.kubernetes.io/master"
+    effect: NoSchedule
+  - key: "CriticalAddonsOnly"
+    operator: "Exists"
+  - key: "node.cloudprovider.kubernetes.io/uninitialized"
+    value: "true"
+    effect: "NoSchedule"
+  - key: node.kubernetes.io/not-ready
+    operator: Exists
+    effect: NoSchedule
+  - key: node.kubernetes.io/unreachable
+    operator: Exists
+    effect: NoSchedule
