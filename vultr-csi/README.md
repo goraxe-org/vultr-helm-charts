@@ -1,6 +1,6 @@
 # vultr-csi
 
-![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.3.0](https://img.shields.io/badge/AppVersion-v0.3.0-informational?style=flat-square)
+![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.19.1](https://img.shields.io/badge/AppVersion-v0.19.1-informational?style=flat-square)
 
 A Helm chart for Vultr's Container Storage Interface.
 
@@ -23,5 +23,5 @@ A Helm chart for Vultr's Container Storage Interface.
 | controller.affinity | object | `{}` |  |
 | controller.resources.limits.cpu | string | `"100m"` |  |
 | env | string | `nil` |  |
-| vultrCSIRelease | string | `"v0.17.1"` |  |
+| vultrCSIRelease | string | `"v0.19.1"` |  |
 
