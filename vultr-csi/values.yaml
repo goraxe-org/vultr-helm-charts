@@ -8,8 +8,12 @@ env:
 
 controller:
   affinity: {}
+  tolerations: []
   resources: {
      limits: {
         cpu: 100m
      }
   }
+
+node:
+  tolerations: []
